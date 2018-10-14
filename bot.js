@@ -12,7 +12,7 @@ const client = new Discord.Client();
 
 
 
-const prefix = '!';
+const prefix = 't!';
 
 
 
@@ -84,18 +84,6 @@ client.on('ready', () => {
 
 
 
-client.on('message', message => {
-
-    if (message.content === prefix + 'forum') {
-
-       message.channel.send('Here ist the link to the Steam forum: https://steamcommunity.com/app/280790/ ;)');
-
-       }
-
-}); 
-
-
-
 
 
 
@@ -116,27 +104,13 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-
-    if (message.content === prefix + 'twitter') {
-
-       message.channel.send('Here ist the link to Creativerse twitter channel: https://twitter.com/creativersegame ;)');
-
-       }
-
-}); 
-
-
-
-
-
 
 
 client.on('message', message => {
 
 	
 
-	if(message.content.toLowerCase() === '<@498113087765872646>') { if(message.author.bot) { return; }
+	if(message.content.toLowerCase() === '<@497685236763590656>') { if(message.author.bot) { return; }
 
 	 
 
@@ -144,8 +118,7 @@ client.on('message', message => {
 
 			 
 
-			 .addField('Hello! I am JoJos Bot:smile:  ', 'At the moment I am a beta bot and will be programmed by Stephan. I dont have many commands yet, but some will come later:wink: make: !help.')
-
+			 .addField('test:smile:  ', 'only test')
 			 .setColor('GREEN')
 
 			 
@@ -176,7 +149,7 @@ client.on('guildMemberAdd', member => {
 
         if (!channel) return;
 
-		channel.send(`${member} Welcome to Jojo's World Discord server:grinning:`);
+		channel.send(`${member}Willkommen!`);
 
 });
 
@@ -208,7 +181,7 @@ client.on('message', message => {
 
 			 
 
-			 .addField('here is my list with commands: ', '!help -gives help commands. !media  -gives social media commands.')
+			 .addField('du brauchst hilfe? ','mach t!hilfe für hilfe')
 
 			 .setColor('GREEN')
 
@@ -226,37 +199,6 @@ client.on('message', message => {
 
 
 
-
-
-
-
-client.on('message', message => {
-
-	
-
-	if(message.content.toLowerCase() === prefix + 'media') { if(message.author.bot) { return; }
-
-	 
-
-	         var embed = new Discord.RichEmbed()
-
-			 
-
-			 .addField('here is my list with social media commands: ', '!forum -gives link to the steam forum. !twitter  -gives the link to creativerse twitter.  !twitch  -gives the link to playfulcorp twitch channel.')
-
-			 .setColor('GREEN')
-
-			 
-
-			message.channel.sendEmbed(embed);
-
-	
-
-	}
-
-	
-
-});
 
 
 
